@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <form id="formGi">
+        <h1 class="heading">SHAREABLE RESUME GENERATOR:</h1>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="username">UserName:</label>
+            <input type="text" class="input" id="username" name="username" placeholder="enter your username" required><br>
+            <label for="firstname">First Name:</label>
+            <input type="text" class="input" id="firstname" name="firstname" placeholder="enter your firstname" required><br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" class="input" id="lastname" name="lastname" placeholder="enter your lastname" required><br>
+            <label for="email">Email:</label>
+            <input type="email" class="input" id="email" name="email" placeholder="enter your email" required><br>
+            <label for="Phonenumber">Phone Number:</label>
+            <input type="number" class="input" id="number" name="number" placeholder="enter your contact no" required><br>
+            <label for="Location">Location:</label>
+            <input type="text" class="input" id="loaction" name="loaction" placeholder="enter your location" required><br>
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+        </fieldset>
+        <fieldset>
+            <legend>Education</legend>
+            <label for="Education">Education:</label>
+            <textarea name="Education" id="Education" rows="4" required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="Skills">Skills:</label>
+            <textarea name="Skills" id="Skills" rows="4" required></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="Experience">Experience:</label>
+            <textarea name="Experience" id="Experience" rows="4" required></textarea>
+        </fieldset>
+        <div class="btn">
+            <button type="submit"><b>Generate:</b></button>
+        </div>
+    </form>
+
+    <div id="output" contenteditable="true"></div>
+    <br>
+    <!-- Shareable link section -->
+<div id="shareableLinkSection" style="display: none;">
+    <h2>Shareable Link</h2>
+    <a href="#" id="shareableLink" target="_blank"></a>
+    <br>
+    <button id="downloadPdf"><b>Download as PDF</b></button>
+  </div>
+  
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
